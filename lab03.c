@@ -1,7 +1,7 @@
 /** lab03.c
  * ===========================================================
- * Name: First Last
- * Section: xxx
+ * Name: Lucas Briggs
+ * Section: T4 Crowl
  * Project: Lab 3 - List ADT (w/array)
  * ===========================================================
  */

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "listADTArray.h"
 
+
 ListADTArray createList() {
 	ListADTArray L;
 	L.size = 0;
@@ -8,11 +9,33 @@ ListADTArray createList() {
 }
 
 int append(ListADTArray *L, int X) {
-	return 0;
+	//Check if list is full
+	if (L->size == MAX) {
+		return 0;
+	}
+
+	//Add new item to end
+	L->items[L->size] = X;
+	L->size += 1;
+	return 1;
 }
 
 int prepend(ListADTArray *L, int X) {
-	return 0;
+	//Check if list is full
+	if (L->size == MAX) {
+		return 0;
+	}
+
+	//Move all elements over
+	int i = 0;
+	for (i = L->size; i > 0; i--) {
+		L->items[i] = L->items[i-1];
+	}
+
+	//Add new element to start
+	L->items[0] = X;
+	L->size += 1;
+	return 1;
 }
 
 int isEmpty(ListADTArray L) {
